@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingVertical="8dp">
+
+    <TextView
+        android:id="@+id/senderEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="yash.halgaonkar"
+        android:textColor="#8e24aa"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:layout_weight="3"
+            android:background="#8e24aa" />
+
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:text="i am not feeling well... see you tommorow in college"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
