@@ -9,6 +9,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -32,7 +34,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
     //widgets
-    private Button mLoginButton, mRegisterButton;
+    private RelativeLayout mLoginButton;
+    private TextView mRegisterTextView;
     private EditText mEmail, mPassword;
     private ProgressBar mProgressBar;
 
@@ -49,13 +52,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         getSupportActionBar().hide();
 
         mLoginButton = findViewById(R.id.login);
-        mRegisterButton = findViewById(R.id.register);
+        mRegisterTextView = findViewById(R.id.register);
         mEmail = findViewById(R.id.username);
         mPassword = findViewById(R.id.password);
         mProgressBar = findViewById(R.id.loading);
         mProgressBar.setVisibility(View.INVISIBLE);
 
-        mRegisterButton.setOnClickListener(
+        mRegisterTextView.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

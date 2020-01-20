@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:paddingTop="8dp"
     android:weightSum="10"
@@ -22,20 +23,32 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:paddingHorizontal="6dp"
-        android:paddingVertical="6dp"
         android:weightSum="10">
 
-        <EditText
-            android:id="@+id/messageEdt"
+        <androidx.cardview.widget.CardView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginRight="12dp"
             android:layout_weight="8.5"
-            android:background="@drawable/rectangle"
-            android:hint="Type a message..."
-            android:textColor="@android:color/black" />
+            android:layout_gravity="center_vertical"
+            app:cardBackgroundColor="#EEEEEE"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:cardCornerRadius="20dp"
+            android:layout_height="50dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_marginLeft="16dp"
+                    android:background="@null"
+                    android:id="@+id/messageEdt"
+                    android:textColor="@color/colorTitle"
+                    android:hint="Type a message..."
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/sendBtn"

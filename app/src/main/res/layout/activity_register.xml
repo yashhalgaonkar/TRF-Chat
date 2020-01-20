@@ -1,93 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    android:orientation="vertical"
+    android:background="@color/colorWhite"
     android:padding="16dp"
-    android:weightSum="10"
     tools:context=".Activities.LoginActivity">
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:src="@drawable/trflogo6_black"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/trflogo6" />
+        android:layout_above="@+id/input_layout"
+        android:layout_width="150dp"
+        android:layout_height="150dp"/>
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/input_layout"
+        android:layout_centerVertical="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical">
-
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rectangle"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:textColor="@android:color/black" />
-
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:background="@drawable/rectangle"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:textColor="@android:color/black" />
-
-
-        <Button
-            android:id="@+id/register"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="14dp"
-            android:background="@drawable/rectangle2"
-            android:text="Register" />
-
-        <ProgressBar
-            android:id="@+id/loading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="14dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/nice_to_see_you_tv"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTitle"
+            android:text="Welcome!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/username_card"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/nice_to_see_you_tv"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Already a user?"
-            android:textColor="@android:color/white"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/colorCardViewBackground"
+            android:layout_height="42dp">
 
-        <Button
-            android:id="@+id/signIn"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_marginLeft="16dp"
+                    android:background="@null"
+                    android:textColor="@color/colorTitle"
+                    android:hint="Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/password_card"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/username_card"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="14dp"
-            android:background="@drawable/rectangle2"
-            android:text="Sign In" />
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/colorCardViewBackground"
+            android:layout_height="42dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_marginLeft="16dp"
+                    android:background="@null"
+                    android:textColor="@color/colorTitle"
+                    android:hint="Password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
 
 
-    </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/register_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/password_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="15dp"
+                android:textColor="@color/colorTitle"
+                android:text="Already a user?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/login"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:text=" Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/register_parent"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/colorAccent"
+            android:layout_width="130dp"
+            app:cardElevation="4dp"
+            android:layout_height="45dp">
+
+            <RelativeLayout
+                android:id="@+id/register"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_marginHorizontal="5dp"
+                    android:textSize="18dp"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:text="REGISTER"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/input_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 
 
 </RelativeLayout>

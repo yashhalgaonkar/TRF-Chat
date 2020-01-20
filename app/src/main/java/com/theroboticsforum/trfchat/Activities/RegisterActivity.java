@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,7 +28,8 @@ import java.util.HashMap;
 public class RegisterActivity extends AppCompatActivity {
 
     //widgets
-    private Button mSignInButton, mRegisterButton;
+    private RelativeLayout mRegisterButton;
+    private TextView mLoginTextView;
     private TextView mEmail,mPassword;
     private ProgressBar mProgress;
 
@@ -51,8 +53,8 @@ public class RegisterActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        mSignInButton = findViewById(R.id.signIn);
         mRegisterButton = findViewById(R.id.register);
+        mLoginTextView = findViewById(R.id.login);
         mEmail = findViewById(R.id.username);
         mPassword = findViewById(R.id.password);
         mProgress = findViewById(R.id.loading);
@@ -60,11 +62,11 @@ public class RegisterActivity extends AppCompatActivity {
         mProgress.setVisibility(View.INVISIBLE);
 
 
-        mSignInButton.setOnClickListener(
+        mLoginTextView.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        signIn();
+                        logIn();
                     }
                 }
         );
@@ -136,6 +138,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
+    //optional
     private void addToDatabase(String email , String password)
     {
         String userUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -162,7 +165,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     //to revert back to LogIn activity
-    private void signIn()
+    private void logIn()
     {
         //move the user to the LogIn activity
         startActivity(new Intent(this, LoginActivity.class));

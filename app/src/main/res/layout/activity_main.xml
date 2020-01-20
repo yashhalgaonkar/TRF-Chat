@@ -11,14 +11,13 @@
 
     <LinearLayout
         android:paddingHorizontal="16dp"
-        android:layout_weight="1"
+        android:layout_weight="0.8"
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:fontFamily="sans-serif-smallcaps"
             android:gravity="center_vertical"
             android:text="Chats"
             android:textColor="@android:color/black"
@@ -27,7 +26,7 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:layout_weight="9"
+        android:layout_weight="9.2"
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
