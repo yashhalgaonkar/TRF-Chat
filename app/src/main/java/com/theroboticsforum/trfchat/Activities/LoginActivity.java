@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         getSupportActionBar().hide();
 
         mLoginButton = findViewById(R.id.login);
-        mRegisterTextView = findViewById(R.id.register);
+        mRegisterTextView = findViewById(R.id.register_tv);
         mEmail = findViewById(R.id.username);
         mPassword = findViewById(R.id.password);
         mProgressBar = findViewById(R.id.loading);

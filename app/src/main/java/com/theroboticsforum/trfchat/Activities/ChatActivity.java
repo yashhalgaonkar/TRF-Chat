@@ -78,8 +78,12 @@ public class ChatActivity extends AppCompatActivity {
 
         //setup the recycler view
         adapter = new CustomChatAdapter(this , chats);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        //layoutManager.setReverseLayout(true);
+        mRecyclerView.setLayoutManager(layoutManager);
+
         mRecyclerView.setAdapter(adapter);
+        mRecyclerView.smoothScrollToPosition(chats.size());
 
         //set onClickListener to sendBtn
         sendBtn.setOnClickListener(
@@ -151,11 +155,14 @@ public class ChatActivity extends AppCompatActivity {
 
         }
 
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         getChats();
+        mRecyclerView.smoothScrollToPosition(chats.size());
+
     }
 }
