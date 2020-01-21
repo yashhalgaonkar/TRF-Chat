@@ -6,12 +6,12 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
+    android:background="@drawable/back"
     android:padding="16dp"
     tools:context=".Activities.LoginActivity">
 
     <ImageView
-        android:src="@drawable/trflogo6_black"
+        android:src="@drawable/trflogo6_white"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/input_layout"
         android:layout_width="150dp"
@@ -28,7 +28,7 @@
             android:id="@+id/nice_to_see_you_tv"
             android:textSize="32dp"
             android:textStyle="bold"
-            android:textColor="@color/colorTitle"
+            android:textColor="@color/colorWhite"
             android:text="Welcome!"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -62,7 +62,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/password_card"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:layout_below="@+id/username_card"
             android:layout_width="match_parent"
             app:cardCornerRadius="20dp"
@@ -97,7 +97,7 @@
 
             <TextView
                 android:textSize="15dp"
-                android:textColor="@color/colorTitle"
+                android:textColor="@color/colorWhite"
                 android:text="Already a user?"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>

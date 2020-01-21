@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@drawable/back"
     android:paddingTop="8dp"
     android:weightSum="10"
     tools:context=".Activities.ChatActivity">
@@ -21,6 +22,7 @@
         android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:weightSum="10">
@@ -30,7 +32,6 @@
             android:layout_weight="8.5"
             android:layout_gravity="center_vertical"
             app:cardBackgroundColor="#EEEEEE"
-            android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             app:cardCornerRadius="20dp"
             android:layout_height="50dp">

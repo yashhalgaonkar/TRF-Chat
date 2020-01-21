@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="yash.halgaonkar"
-        android:textColor="#8e24aa"
+        android:textColor="@color/colorAccent"
         android:textSize="18dp"
         android:textStyle="bold" />
 
@@ -25,15 +25,15 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="8dp"
-            android:layout_weight="3"
-            android:background="#8e24aa" />
+            android:layout_weight="5"
+            android:background="@color/colorAccent" />
 
         <TextView
             android:id="@+id/messageTextView"
             android:layout_width="275dp"
             android:layout_height="wrap_content"
             android:text="i am not feeling well... see you tommorow in college"
-            android:textColor="@android:color/black"
+            android:textColor="@color/colorWhite"
             android:textSize="18dp" />
 
 

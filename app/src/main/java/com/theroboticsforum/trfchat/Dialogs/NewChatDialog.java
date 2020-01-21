@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -25,7 +26,7 @@ public class NewChatDialog extends DialogFragment implements View.OnClickListene
 
     //widgets
     private EditText mEmail;
-    private Button mSend;
+    private RelativeLayout mSend;
 
     //vars
 

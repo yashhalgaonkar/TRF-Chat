@@ -35,7 +35,7 @@ public class ChatActivity extends AppCompatActivity {
     private ArrayList<Message> chats;
     private static final String chatrooms = "chatrooms";
     private static final String messages = "messages";
-    //private String key;
+
 
     //firebase database
     private DatabaseReference mChatRef;
@@ -165,4 +165,5 @@ public class ChatActivity extends AppCompatActivity {
         mRecyclerView.smoothScrollToPosition(chats.size());
 
     }
+
 }
