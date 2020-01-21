@@ -90,7 +90,7 @@
         <LinearLayout
             android:id="@+id/register_parent"
             android:orientation="horizontal"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:layout_below="@+id/password_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -116,6 +116,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginBottom="10dp"
             android:layout_below="@+id/register_parent"
+            android:layout_centerHorizontal="true"
             app:cardCornerRadius="20dp"
             app:cardBackgroundColor="@color/colorAccent"
             android:layout_width="130dp"
