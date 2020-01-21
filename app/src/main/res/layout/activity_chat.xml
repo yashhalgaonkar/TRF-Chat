@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:background="@drawable/back"
+    android:orientation="vertical"
     android:paddingTop="8dp"
     android:weightSum="10"
     tools:context=".Activities.ChatActivity">
@@ -22,32 +22,32 @@
         android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="8dp"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
         android:weightSum="10">
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
-            android:layout_weight="8.5"
+            android:layout_height="50dp"
             android:layout_gravity="center_vertical"
-            app:cardBackgroundColor="#EEEEEE"
             android:layout_marginRight="8dp"
-            app:cardCornerRadius="20dp"
-            android:layout_height="50dp">
+            android:layout_weight="8.5"
+            app:cardBackgroundColor="#EEEEEE"
+            app:cardCornerRadius="20dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <EditText
+                    android:id="@+id/messageEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_marginLeft="16dp"
                     android:background="@null"
-                    android:id="@+id/messageEdt"
-                    android:textColor="@color/colorTitle"
                     android:hint="Type a message..."
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:textColor="@color/colorTitle" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
